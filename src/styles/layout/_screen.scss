@@ -1,0 +1,16 @@
+//---------------------------------------------------------
+//import utils sass
+@import "../utils/variables";
+
+//---------------------------------------------------------
+//main rules for the screen
+.screen {
+    position: relative;
+    box-sizing: border-box;
+    width: 98%;
+    margin-left: 0.8%;
+    margin-top: 1%;
+    height: 75%;
+}
+
+//---------------------------------------------------------

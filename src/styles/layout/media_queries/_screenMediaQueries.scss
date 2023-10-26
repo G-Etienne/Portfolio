@@ -1,0 +1,42 @@
+//---------------------------------------------------------
+//BREAKPOINTS :
+// zero-px: 0px,
+// mobile-max: 480px,
+// small-devices-min: 481px,
+// small-devices-max: 767px,
+// small-tablet-min: 768px,
+// small-tablet-max: 991px,
+// large-tablet-and-laptop-min: 992px,
+// large-tablet-and-laptop-max: 1199px,
+// desktop-min: 1200px,
+// desktop-max: 1919px,
+// extra-large-screen-min: 1920px
+
+//---------------------------------------------------------
+//media queries special height
+@media screen and (max-height: 900px) {
+    .screen {
+        margin-top: 2%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .screen {
+        margin-top: 2.5%;
+        margin-left: 0.7%;
+        height: 69.5vh;
+    }
+}
+
+@media screen and (max-width: 767px) and (max-height: 800px) {
+    .screen {
+        height: 66.5vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .screen {
+        margin-left: 0.55%;
+    }
+}

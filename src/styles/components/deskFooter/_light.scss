@@ -1,0 +1,191 @@
+//--------------------------------------------------
+//import utils
+@import "../../utils/variables";
+@import "../../utils/Mixins/mixinFooter";
+
+//--------------------------------------------------
+//main rules for the light
+.light {
+    position: absolute;
+    z-index: 150;
+    right: 22%;
+    top: -12px;
+    height: 80px;
+    width: 35px;
+    scale: 0.75;
+
+    //head in the top of the lamp
+    &__head {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 37;
+        height: 100px;
+        width: 30px;
+        top: -57px;
+        margin: auto;
+        transform: perspective(150px) rotateX(75deg);
+        border-radius: 0px 0px 15px 15px;
+        border-bottom: 1px black solid;
+
+        background: linear-gradient(
+            90deg,
+            rgb(88, 88, 88),
+            grey,
+            rgb(88, 88, 88) 70%
+        );
+
+        //dark mode
+        &.darkHead {
+            background: linear-gradient(
+                90deg,
+                grey,
+                darken(rgb(88, 88, 88), 10%) 30%
+            );
+        }
+
+        //top of the head lamp
+        &__top {
+            box-sizing: border-box;
+            position: relative;
+            top: -6px;
+            margin: auto;
+            z-index: 36;
+            height: 22px;
+            width: 22px;
+            background-color: rgb(72, 72, 72);
+            border: 1px black solid;
+            border-radius: 50%;
+            transform: perspective(150px) rotateX(85deg);
+
+            //dark mode
+            &.darkHeadTop {
+                background: radial-gradient(white, yellow);
+                border: darken(yellow, 15%);
+            }
+        }
+    }
+
+    //light when the site is in dark mode
+    &__on {
+        //light under the head
+        &.darkHead {
+            position: absolute;
+            z-index: 36;
+            top: -45px;
+            left: -2px;
+            height: 150px;
+            width: 40px;
+            background: linear-gradient($color-light, transparent);
+            transform: perspective(150px) rotateX(72deg);
+        }
+
+        &__top {
+            //light on the head
+            &.darkHead {
+                position: absolute;
+                z-index: 35;
+                top: -69px;
+                left: 8px;
+                height: 150px;
+                width: 20px;
+                rotate: 180deg;
+                background: linear-gradient($color-light, transparent);
+                transform: perspective(150px) rotateX(87deg);
+            }
+        }
+
+        //light on the desk
+        &__bottom {
+            &.darkHead {
+                position: absolute;
+                z-index: 34;
+                top: 35px;
+                left: -18px;
+                height: 72px;
+                width: 72px;
+                background: radial-gradient($color-light, transparent 90%);
+                transform: perspective(150px) rotateX(65deg);
+                border-radius: 50%;
+                opacity: 0.4;
+            }
+        }
+    }
+
+    //style for the arm of the lamp
+    &__arm {
+        position: relative;
+        z-index: 34;
+        height: 50px;
+        width: 5px;
+        top: -100px;
+        margin: auto;
+        border-radius: 1px;
+
+        background: linear-gradient(
+            90deg,
+            rgb(33, 33, 33),
+            grey,
+            rgb(33, 33, 33) 80%
+        );
+
+        //dark mode
+        &.darkArm {
+            background: linear-gradient(
+                90deg,
+                lighten(rgb(33, 33, 33), 35%),
+                lighten(grey, 15%),
+                lighten(rgb(33, 33, 33), 35%)
+            );
+        }
+
+        //shadow behind the arm
+        &__Shadow {
+            position: relative;
+            top: -108px;
+            z-index: 33;
+            left: 20px;
+            height: 8px;
+            width: 4px;
+            rotate: -120deg;
+            background: linear-gradient(rgb(23, 23, 23), transparent);
+            border-radius: 1px;
+
+            &.darkArmShadow {
+                background: transparent;
+            }
+        }
+    }
+
+    //style for the top of the base
+    &__baseTop {
+        z-index: 32;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background-color: grey;
+        transform: perspective(150px) rotateX(65deg);
+        position: absolute;
+        bottom: -8px;
+        box-shadow: 0px 0px 3px black;
+
+        &::after {
+            @include afterLight(50%);
+
+            background: linear-gradient(-160deg, rgb(11, 11, 11), transparent);
+        }
+
+        //dark mode
+        &.darkBaseTop {
+            background-color: grey;
+
+            &::after {
+                @include afterLight(50%);
+
+                background: radial-gradient(
+                    lighten(grey, 20%),
+                    lighten(rgb(42, 41, 41), 20%)
+                );
+            }
+        }
+    }
+}

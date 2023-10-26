@@ -1,0 +1,104 @@
+//---------------------------------------------------------
+//utils sass
+@import "../utils/variables";
+
+//---------------------------------------------------------
+//display footer
+
+.footer.graphics,
+.footer.resume,
+.footer.goals,
+.footer.about,
+.footer.contact,
+.footer.home,
+.footer.skills,
+.footer.projects,
+.footer.trainings {
+    display: block;
+}
+
+//---------------------------------------------------------
+//hidding animation and screen for the other pages than home
+.resume,
+.projects,
+.skills,
+.graphics,
+.goals,
+.trainings,
+.about,
+.contact {
+    display: none;
+}
+
+//image in the back of some pages
+.backImageScreen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+//adding border and shadow to the screen
+.backImageScreen.white {
+    border: 2px $border-screen solid;
+    box-shadow: 0px 0px 10px black;
+}
+
+.backImageScreen.dark {
+    border: 2px darken($border-screen, 25%) solid;
+    box-shadow: 0px 0px 25px lighten($main-back-color, 10%);
+}
+
+//---------------------------------------------------------
+//strong normalization for the trainings page
+.trainingsMain__web__textContainer > p > strong {
+    font-weight: normal;
+}
+//---------------------------------------------------------
+//min width of the app
+#root {
+    min-width: 280px;
+}
+
+//---------------------------------------------------------
+//interaction for the dark and white theme
+.button {
+    z-index: 216;
+    position: absolute;
+}
+
+//---------------------------------------------------------
+//container of the application
+.mainBack {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+//---------------------------------------------------------
+//polices
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Permanent Marker", cursive;
+}
+p {
+    font-family: "Rubik", sans-serif;
+}
+//---------------------------------------------------------
+//bases for the white and dark theme
+
+//white theme
+.whitemain {
+    background-color: lighten($main-back-color, 10%);
+    box-shadow: inset 0px 0px 500px darken($main-back-color, 15%);
+}
+
+//dark theme
+.darkmain {
+    background-color: darken($main-back-color, 70%);
+    box-shadow: inset 0px 0px 500px darken($main-back-color, 85%);
+}
