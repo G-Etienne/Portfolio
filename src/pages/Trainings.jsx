@@ -85,10 +85,7 @@ function Trainings() {
 
                                     <h2>Développeur Intégrateur Web</h2>
 
-                                    <h4>
-                                        Formation diplômante / Enseignement
-                                        collégial
-                                    </h4>
+                                    <h4>Formation diplômante</h4>
 
                                     <p
                                         className={`trainingsMain__web__textContainer__center ${theme}`}
@@ -242,7 +239,7 @@ function Trainings() {
 
                                     <h2>Web Developer and Integrator</h2>
 
-                                    <h4>Diploma Program / College Education</h4>
+                                    <h4>Diploma Program</h4>
 
                                     <p
                                         className={`trainingsMain__web__textContainer__center ${theme}`}

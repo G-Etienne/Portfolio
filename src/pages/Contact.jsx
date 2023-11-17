@@ -25,10 +25,10 @@ function Contact() {
     const { langue } = useContext(LangueContext);
 
     let backImage = backImageClear;
-    
-    if(theme === "white"){
+
+    if (theme === "white") {
         backImage = backImageClear;
-    }else if (theme === "dark"){
+    } else if (theme === "dark") {
         backImage = backImageDark;
     }
 
@@ -41,7 +41,12 @@ function Contact() {
                 <div className="contactScreen__headerPage"></div>
 
                 {/* image in the back of the screen */}
-                <img src={backImage} className="contactScreen__backImage" rel="preload" loading="lazy"></img>
+                <img
+                    src={backImage}
+                    className="contactScreen__backImage"
+                    rel="preload"
+                    loading="lazy"
+                ></img>
 
                 {/* main part contact */}
                 <div className={`contactScreen__main ${theme}`}>
@@ -59,7 +64,7 @@ function Contact() {
                         <p
                             className={`contactMain__localisation special ${theme}`}
                         >
-                            Montréal, QC
+                            Mes contacts
                         </p>
 
                         <div className={`contactMain__container ${theme}`}>
@@ -110,10 +115,10 @@ function Contact() {
 
                                 {/* button */}
                                 <a
-                                    href="tel: +15795002150"
+                                    href="tel: +33766488308"
                                     className={`contactMain__contacts__button phone  ${theme}`}
                                 >
-                                    +1 579 500 2150
+                                    +33 7 66 48 83 08
                                 </a>
                             </div>
 
@@ -161,7 +166,12 @@ function Contact() {
                 <div className="contactScreen__headerPage"></div>
 
                 {/* image in the back of the screen */}
-                <img src={backImage} className="contactScreen__backImage" rel="preload" loading="lazy"></img>
+                <img
+                    src={backImage}
+                    className="contactScreen__backImage"
+                    rel="preload"
+                    loading="lazy"
+                ></img>
 
                 {/* main part contact */}
                 <div className={`contactScreen__main ${theme}`}>
@@ -179,7 +189,7 @@ function Contact() {
                         <p
                             className={`contactMain__localisation special ${theme}`}
                         >
-                            Montréal, QC
+                            My contacts
                         </p>
 
                         <div className={`contactMain__container ${theme}`}>
@@ -230,10 +240,10 @@ function Contact() {
 
                                 {/* button */}
                                 <a
-                                    href="tel: +15795002150"
+                                    href="tel: +33766488308"
                                     className={`contactMain__contacts__button phone  ${theme}`}
                                 >
-                                    +1 579 500 2150
+                                    +33 7 66 48 83 08
                                 </a>
                             </div>
 
